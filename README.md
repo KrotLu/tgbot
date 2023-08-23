@@ -1,6 +1,10 @@
 # tgbot_template
-6032056864:AAG2LWNgC8YMVw7v8XtUlyueaPQpys2LNRY new bar
+
+За основу бота была взята готовая структура.
 **Structure:**
+
+Как работает можно посмотреть здесь:
+https://t.me/new_bar_bot
 
 ```
 tgbot_template/
@@ -13,6 +17,15 @@ tgbot_template/
 │   └── middlewares/
 ```
 
+
+Этот бот умеет выбирать из таблицы (в частности exel) нужные данные в зависимости от запроса пользователя.
+
+Процесс: 
+1. бот задает вопрос 
+2. человек нажимает на кнопку кастомной клавиатуры 
+3. спустя нужного количества вопросов бот выдает нужные данные
+
+Описание структуры бота и возможностей:
 - The `tgbot` package is the root package for the bot, and it contains sub-packages for **filters**, **handlers**,
   and **middlewares**.
 
