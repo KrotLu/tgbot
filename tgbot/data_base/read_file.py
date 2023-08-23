@@ -4,12 +4,10 @@ from pandas import read_excel, DataFrame
 class Task_Menu:
     def __init__(self) -> None:
     
-        excel_data = read_excel('template_new\\tgbot_template\\tgbot\data_base\\Bd.xlsx', index_col=0, header=1)
-        self.col_names= ['Температура',	'Объем','Крепость',	'Вкус',	'Аромат 1','Аромат 2','Цена',	'Бокал','Состав','Описание'
-]
+        excel_data = read_excel('tgbot\data_base\\Bd.xlsx', index_col=0, header=1)
         self.data = DataFrame(excel_data)
         self.data= self.data.astype(str)
-        #data=data.reset_index(drop=True)
+        
         self.temp = self.data.iloc[0:,0:2]
         self.vol = self.data.iloc[0:,2:4]
         self.grade = self.data.iloc[0:,4:7]
